@@ -24,9 +24,9 @@ O objetivo principal deste trabalho foi criar uma aplicação web básica e, em 
 * **Código fonte simples:** A aplicação consiste em um projeto web básico em HTML/CSS/JS puro.
 * **Estrutura de branches (`main`, `dev`) bem definidas:** O fluxo de trabalho segue as branches `main` (para produção) e `dev` (para desenvolvimento e novas funcionalidades).
 * **Arquivo `.github/workflows/ci.yml` funcional:** Um pipeline de CI/CD está configurado no arquivo `ci.yml`, executando as seguintes etapas automaticamente a cada `push` ou `pull request` para a branch `main`:
-    1.  **Instalação de Dependências:** `pnpm install --frozen-lockfile` garante que todas as dependências do projeto sejam instaladas de forma consistente.
-    2.  **Execução de Validação/Testes:** `pnpm run test` executa os testes unitários configurados com Vitest, garantindo a integridade e funcionalidade do código.
-    3.  **Build da Aplicação:** `pnpm run build` compila o projeto para uma versão otimizada pronta para deploy.
+    1.  **Instalação de Dependências:** `npm install` garante que todas as dependências do projeto sejam instaladas de forma consistente.
+    2.  **Execução de Validação/Testes:** `npm test` executa os testes unitários configurados com Vitest, garantindo a integridade e funcionalidade do código.
+    3.  **Build da Aplicação:** `npm run build` compila o projeto para uma versão otimizada pronta para deploy.
 * **Build/validação automática ao fazer push ou pull request para a `main`:** Conforme descrito acima, o workflow de CI/CD é acionado automaticamente em pushes e pull requests para a `main`, garantindo que o código seja sempre validado e construído.
 
 ### 🚀 Critérios Extras (Bônus)
