@@ -1,6 +1,8 @@
-# TDE de Engenharia
+# TDE de Engenharia de Software
 
-Este é um projeto simples desenvolvido como parte de uma atividade acadêmica, utilizando HTML, CSS e JavaScript Vanilla com o auxílio do Vite.
+Este projeto foi desenvolvido como parte de uma atividade acadêmica, utilizando **HTML, CSS e JavaScript Vanilla** com o auxílio do **Vite** para um ambiente de desenvolvimento moderno e otimizado.
+
+---
 
 ## Integrantes
 
@@ -10,16 +12,40 @@ Este é um projeto simples desenvolvido como parte de uma atividade acadêmica, 
 * Gian Carlos
 * Adrysson Rhuan
 
-## Descrição da Atividade
+---
 
-O objetivo principal deste trabalho foi criar uma aplicação web básica e, em seguida, configurar um fluxo de integração contínua utilizando **GitHub Actions**.
+## Descrição da Atividade e Requisitos Atendidos
 
-O fluxo de trabalho configurado é responsável por:
+O objetivo principal deste trabalho foi criar uma aplicação web básica e, em seguida, configurar um fluxo robusto de **Integração Contínua (CI)** e **Deploy Contínuo (CD)** utilizando **GitHub Actions** e **Vercel**, conforme os requisitos da disciplina:
 
-1.  **Instalar as dependências** do projeto automaticamente sempre que houver um push ou pull request para a branch principal.
-2.  **Executar os testes automatizados** (configurados com Vitest) para garantir a integridade do código.
+### ✅ Requisitos Obrigatórios
 
-## Como Executar
+* **Projeto com `README.md` explicando a atividade:** Este próprio arquivo detalha a atividade e a estrutura do projeto.
+* **Código fonte simples:** A aplicação consiste em um projeto web básico em HTML/CSS/JS puro.
+* **Estrutura de branches (`main`, `dev`) bem definidas:** O fluxo de trabalho segue as branches `main` (para produção) e `dev` (para desenvolvimento e novas funcionalidades).
+* **Arquivo `.github/workflows/ci.yml` funcional:** Um pipeline de CI/CD está configurado no arquivo `ci.yml`, executando as seguintes etapas automaticamente a cada `push` ou `pull request` para a branch `main`:
+    1.  **Instalação de Dependências:** `pnpm install --frozen-lockfile` garante que todas as dependências do projeto sejam instaladas de forma consistente.
+    2.  **Execução de Validação/Testes:** `pnpm run test` executa os testes unitários configurados com Vitest, garantindo a integridade e funcionalidade do código.
+    3.  **Build da Aplicação:** `pnpm run build` compila o projeto para uma versão otimizada pronta para deploy.
+* **Build/validação automática ao fazer push ou pull request para a `main`:** Conforme descrito acima, o workflow de CI/CD é acionado automaticamente em pushes e pull requests para a `main`, garantindo que o código seja sempre validado e construído.
+
+### 🚀 Critérios Extras (Bônus)
+
+* **Deploy automático configurado:** O projeto possui **Deploy Contínuo (CD)** configurado na plataforma **Vercel**. A cada `push` na branch `main`, a Vercel é automaticamente acionada para criar um novo build e publicar a versão mais recente da aplicação.
+
+---
+
+## Deploy da Aplicação
+
+A versão mais recente da aplicação está automaticamente publicada e pode ser acessada através do seguinte link:
+
+**[https://tde-engenharia-software.vercel.app/](https://tde-engenharia-software.vercel.app/)**
+
+---
+
+## Como Executar o Projeto Localmente
+
+Para clonar o repositório e rodar o projeto em sua máquina:
 
 1.  **Clone o repositório:**
     ```bash
