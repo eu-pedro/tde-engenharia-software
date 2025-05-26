@@ -3,6 +3,7 @@ import { appContainer } from '../src/app'
 
 describe("App Container", () => {
   let appDiv; 
+  
 
   beforeEach(() => {
     appDiv = document.createElement('div');
@@ -28,7 +29,7 @@ describe("App Container", () => {
     expect(app?.innerHTML).toContain('Pedro Henrique');
 
     const spans = app?.querySelectorAll('span');
-    
+
     expect(spans?.length).toBe(6);
   });
 });
