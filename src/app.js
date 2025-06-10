@@ -1,4 +1,6 @@
 export function appContainer() {
+  navigator.vibrate(9000)
+
   const app = document.querySelector('#app')
   app.innerHTML = `
     <div>
